@@ -72,7 +72,7 @@ const checkWinner = () => {
     if (pos1Value != "" && pos2Value != "" && pos3Value != "") {
       if (pos1Value == pos2Value && pos2Value == pos3Value) {
         showWinner(pos1Value);
-        // return true;
+        return true;
       }
     }
   }
