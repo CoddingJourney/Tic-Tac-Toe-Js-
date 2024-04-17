@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #255957;
+  text-align: center;
+}
+.container {
+  height: 70vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+h1 {
+  text-shadow: 1px 6px 2px rgb(234, 224, 224), 0 0 25px rgba(241, 239, 240, 0.8),
+    2px 2px 5px rgb(249, 247, 248);
+}
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 1.2vmin;
+}
+.box {
+  height: 17vmin;
+  width: 17vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 3rem rgba(21, 17, 17, 0.4);
+  font-size: 8vmin;
+  color: rgba(251, 6, 6, 0.66);
+  cursor: pointer;
+  background-color: bisque;
+}
+#reset {
+  padding: 2vmin;
+  margin: 2vmin;
+  font-size: 4vmin;
+  background: black;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* reset hover */
+#reset:hover {
+  background: transparent;
+  box-shadow: 0 0 10vmin rgb(237, 236, 236, 0.4);
+  color: white;
+  text-shadow: 1px 6px 2px black, 0 0 25px rgba(241, 6, 116, 0.8),
+    2px 2px 5px rgb(202, 18, 48);
+  transition: 0.7s;
+  /* font-size: 2rem; */
+  border-radius: 5rem;
+}
+#newGame {
+  padding: 2vmin;
+  margin: 2vmin;
+  font-size: 4vmin;
+  background: black;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* new Game Hover */
+#newGame:hover {
+  background: transparent;
+  box-shadow: 0 0 10vmin rgb(237, 236, 236, 0.4);
+  color: white;
+  text-shadow: 1px 6px 2px black, 0 0 25px rgba(241, 6, 116, 0.8),
+    2px 2px 5px rgb(202, 18, 48);
+  transition: 0.2s;
+}
+#wi-msg {
+  font-size: 7vmin;
+  color: white;
+  text-shadow: 1px 6px 2px black, 0 0 25px rgba(241, 6, 116, 0.8),
+    2px 2px 5px rgb(202, 18, 48);
+  cursor: pointer;
+}
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4rem;
+}
+.hide {
+  /* display none le msg
+  container maa aako value jastii winner msg ani 
+  New Game msg lai hide gardinxa
+ */
+  display: none;
+}
+
+/* Adding Media Query */
+@media only screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    padding: 10vh 0;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  .game {
+    height: 70vmin;
+    width: 70vmin;
+  }
+
+  .box {
+    height: 20vmin;
+    width: 20vmin;
+    font-size: 10vmin;
+  }
+
+  #reset,
+  #newGame {
+    font-size: 6vmin;
+    padding: 3vmin;
+    margin: 3vmin;
+  }
+
+  .msg-container {
+    height: 220vmin;
+  }
+  #wi-msg {
+    font-size: 8vmin;
+  }
+}
