@@ -46,13 +46,13 @@ let gameDraw = () => {
   disableBoxes();
 };
 
-disableBoxes = () => {
+const disableBoxes = () => {
   for (let box of boxes) {
     box.disabled = true;
   }
 };
 
-enableBoxes = () => {
+let enableBoxes = () => {
   for (let box of boxes) {
     box.disabled = false;
     box.innerText = "";
@@ -68,10 +68,11 @@ const checkWinner = () => {
   for (let pattern of winPattern) {
     let pos1Value = boxes[pattern[0]].innerText;
     let pos2Value = boxes[pattern[1]].innerText;
-    let pos3Value = boxes[pattern[2]].innerText;
+    let pos3Value = boxes[pattern[2]].innerText; //!= "" means should not be empty
     if (pos1Value != "" && pos2Value != "" && pos3Value != "") {
       if (pos1Value == pos2Value && pos2Value == pos3Value) {
         showWinner(pos1Value);
+        // return true;
       }
     }
   }
